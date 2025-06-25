@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobilet - Solicita tu Cotización de Baños Portátiles</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; }
+    .container { max-width: 700px; margin: 0 auto; background: #fff; padding: 32px 24px 24px 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-radius: 12px; margin-top: 32px; }
+    h1 { font-size: 2.2em; margin-bottom: 0.2em; color: #1a237e; }
+    h2 { font-size: 1.3em; margin-top: 1.5em; color: #3949ab; }
+    h3 { font-size: 1.1em; margin-top: 1.2em; color: #222; }
+    .btn-primary { background: #3949ab; color: #fff; padding: 12px 28px; border: none; border-radius: 6px; font-size: 1.1em; cursor: pointer; margin: 18px 0; display: inline-block; }
+    .steps { display: flex; flex-wrap: wrap; gap: 24px; margin: 32px 0; }
+    .step { flex: 1 1 180px; background: #e8eaf6; border-radius: 8px; padding: 18px 14px; text-align: center; }
+    .step-number { font-size: 2.2em; font-weight: bold; color: #3949ab; }
+    form { margin-top: 24px; }
+    label { display: block; margin-top: 16px; font-weight: bold; }
+    input, select { width: 100%; padding: 8px; margin-top: 6px; border: 1px solid #bbb; border-radius: 4px; font-size: 1em; }
+    .radio-group, .checkbox-group { display: flex; gap: 18px; margin-top: 8px; }
+    .map-section { background: #f1f1f1; border-radius: 8px; padding: 16px; margin-top: 18px; }
+    .map-placeholder { background: #c5cae9; height: 180px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #3949ab; font-size: 1.1em; margin-bottom: 8px; cursor: pointer; }
+    .info-boxes { display: flex; gap: 18px; margin-top: 24px; }
+    .info-box { flex: 1 1 180px; background: #e3f2fd; border-radius: 8px; padding: 14px; text-align: center; }
+    .contact-section { margin-top: 36px; background: #f5f5f5; border-radius: 8px; padding: 18px; }
+    .contact-method { margin-top: 12px; }
+    .powered { text-align: right; color: #888; font-size: 0.95em; margin-top: 32px; }
+    @media (max-width: 600px) {
+      .container { padding: 12px 4vw; margin-top: 0; }
+      .steps, .info-boxes { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mobilet</h1>
+    <h2>Solicita tu Cotización de Baños Portátiles</h2>
+    <p>En Mobilet sabemos que cada proyecto es único. Completa este breve formulario y recibe tu cotización en menos de 24 horas, sin compromiso.</p>
+    <button class="btn-primary">Solicitar Cotización Gratis</button>
+
+    <h2>Proceso Simple en 3 Pasos</h2>
+    <p>Obtener tu cotización es muy fácil y rápido</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Llena el formulario</h3>
+        <p>Ingresa los datos básicos de tu proyecto</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Recibe tu cotización</h3>
+        <p>La recibirás por WhatsApp desde nuestro número oficial</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Confirma y agenda</h3>
+        <p>Programa fecha de entrega, limpieza y recolección</p>
+      </div>
+    </div>
+
+    <h2>Información Necesaria Para Generar Tu Cotización</h2>
+    <form>
+      <h3>Información de Contacto</h3>
+      <label for="whatsapp">Número de WhatsApp *</label>
+      <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Ej. +52 1 55 1234 5678">
+
+      <h3>Detalles del Servicio</h3>
+      <label for="tipo-servicio">Tipo de Servicio *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="tipo-servicio" value="Obra" required> Obra</label>
+        <label><input type="radio" name="tipo-servicio" value="Evento"> Evento</label>
+      </div>
+      <label for="cantidad">Cantidad de Baños *</label>
+      <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+      <h3>Información de Ubicación</h3>
+      <label for="calle">Calle y Número *</label>
+      <input type="text" id="calle" name="calle" required>
+      <label for="colonia">Colonia</label>
+      <input type="text" id="colonia" name="colonia">
+      <label for="ciudad">Ciudad</label>
+      <input type="text" id="ciudad" name="ciudad">
+      <label for="estado">Estado</label>
+      <input type="text" id="estado" name="estado">
+      <label for="cp">Código Postal</label>
+      <input type="text" id="cp" name="cp">
+
+      <h3>Ubicación Exacta del Servicio</h3>
+      <div class="map-section">
+        <div class="map-placeholder" title="Haz clic para seleccionar ubicación">Haz clic en el mapa para seleccionar la ubicación exacta donde necesitas el servicio</div>
+        <div>San Andrés Cholula, Puebla</div>
+        <div style="margin-top: 6px; font-size: 0.98em; color: #3949ab;">Haz clic para seleccionar ubicación</div>
+        <div style="margin-top: 8px; font-size: 0.97em;">
+          <strong>Coordenadas seleccionadas:</strong><br>
+          Latitud: 19.043800<br>
+          Longitud: -98.197300
+        </div>
+        <div style="margin-top: 8px; font-size: 0.93em; color: #888;">
+          * En la versión final se integrará con Google Maps para una selección precisa de ubicación
+        </div>
+      </div>
+
+      <h3>Información de Pago</h3>
+      <label for="pago">Forma de Pago *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="pago" value="Efectivo" required> Efectivo</label>
+        <label><input type="radio" name="pago" value="Transferencia Bancaria"> Transferencia Bancaria</label>
+      </div>
+      <label>¿Requiere factura?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="factura" value="Sí"> Sí</label>
+        <label><input type="radio" name="factura" value="No" checked> No</label>
+      </div>
+      <button class="btn-primary" type="submit">Solicitar Cotización</button>
+    </form>
+
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>Calidad Garantizada</h3>
+        <p>Baños portátiles limpios y en perfectas condiciones</p>
+      </div>
+      <div class="info-box">
+        <h3>Respuesta 24h</h3>
+        <p>Cotización personalizada en menos de 24 horas</p>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2>¿Tienes dudas?</h2>
+      <p>Contáctanos directamente para resolver cualquier pregunta</p>
+      <div class="contact-method">
+        <h3>WhatsApp</h3>
+        <p>Respuesta inmediata por WhatsApp</p>
+        <p>?? <a href="https://wa.me/5215512345678" style="color:#3949ab; text-decoration:underline;">+52 1 55 1234 5678</a></p>
+      </div>
+      <div class="contact-method">
+        <h3>Email</h3>
+        <p>Envíanos un correo electrónico</p>
+        <p><a href="mailto:contacto@mobilet.floxia.io" style="color:#3949ab; text-decoration:underline;">contacto@mobilet.floxia.io</a></p>
+      </div>
+    </div>
+    <div class="powered">Powered by floxia.io</div>
+  </div>
+</body>
+</html>
